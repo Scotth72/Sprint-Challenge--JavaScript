@@ -7,8 +7,24 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
+const dinOne = ({
+  name: `tyannosaurus`,
+  diet:`carnivorous`,
+  weight:`7000kg`,
+  length:`12m`,
+  period:`Late Cretaceous`,
+  roar: function(){
+    return `RAWERSRARARWERSARARARRRR!`
+  }
+})
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const dinTwo = ({
+  name: `stegosaurus`,
+  diet:`herbivorous`,
+  weight:`2000kg`,
+  length:`9m`,
+  period:`Late Jurassic`
+})
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
