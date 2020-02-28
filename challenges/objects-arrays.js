@@ -7,33 +7,33 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-const dinOne = ({
+const dinOne = {
   name: `tyannosaurus`,
-  diet:`carnivorous`,
-  weight:`7000kg`,
-  length:`12m`,
-  period:`Late Cretaceous`,
+  diet: `carnivorous`,
+  weight: `7000kg`,
+  length: `12m`,
+  period: `Late Cretaceous`,
   roar: function(){
     return `RAWERSRARARWERSARARARRRR!`
   }
-})
+};
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-const dinTwo = ({
+const dinTwo = {
   name: `stegosaurus`,
-  diet:`herbivorous`,
-  weight:`2000kg`,
-  length:`9m`,
-  period:`Late Jurassic`
-})
+  diet: `herbivorous`,
+  weight: `2000kg`,
+  length: `9m`,
+  period: `Late Jurassic`
+};
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-const dinThree = ({
-  name:`velociraptor`,
-  diet:`carnivorous`,
-  weight:`15kg`,
-  length:`1.8m`,
-  period:`Late Cretaceous`
-})
+const dinThree = {
+  name: `velociraptor`,
+  diet: `carnivorous`,
+  weight: `15kg`,
+  length: `1.8m`,
+  period: `Late Cretaceous`
+};
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -77,8 +77,9 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = graduates.map(function(item){
   return item.university
 })
-university.sort()
-console.log(universities);
+ //items.university.sort
+console.log(universities.sort());
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -87,7 +88,7 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = graduates.map(function(item){
-  return `${first_name} ${email}`
+  return `${item.first_name} ${item.email}`
 })
 console.log(contactInfo);
 
@@ -132,9 +133,8 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
- let lowCaseAnimalNames = zooAnimals.map(function(item){
-  return item.animal_name.toLocaleLowerCase
+const lowCaseAnimalNames  = zooAnimals.map(function(item){
+  return item.animal_name.toLowerCase()
 })
 console.log(lowCaseAnimalNames);
 
@@ -154,9 +154,8 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-zooAnimals.reduce(function(accumulator, item){
-  return populationTotal = accumulator  + item.population
+const populationTotal = zooAnimals.reduce(function(accumulator, item){
+  return accumulator  + item.population, 0
 })
 console.log(populationTotal);
 
